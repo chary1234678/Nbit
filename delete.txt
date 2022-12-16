@@ -1,0 +1,53 @@
+public class DeleteFood
+{
+    public static void deletebillpay()
+    {
+        list<Bill_payment__c> listBill= new list<Bill_payment__c>();
+        list<Bill_payment__c> lstbl=[Select id from Bill_payment__c ];
+        for(Bill_payment__c b:lstbl)
+        {
+            listBill.add(b);
+        }
+        delete listBill;
+    }
+public static void deleteCoffeeCourt()
+    {
+        list<Coffee_food_court__c> listCofee= new list<Coffee_food_court__c>();
+        list<Coffee_food_court__c> lstcf=[Select id from Coffee_food_court__c where isdeleted=true];
+        for(Coffee_food_court__c c:lstcf)
+        {
+           listCofee.add(c);
+        }
+        delete  listCofee;
+    }
+        public static void deleteTEaCourt()
+    {
+        list<Tea_Food_court__c> listCofee= new list<Tea_Food_court__c>();
+        list<Tea_Food_court__c> lstcf=[Select id from Tea_Food_court__c ];
+        for(Tea_Food_court__c c:lstcf)
+        {
+           listCofee.add(c);
+        }
+        delete  listCofee;
+    }
+     public static void deleteFoodOrder()
+    {
+        list<FoodOrder__c> listCofee= new list<FoodOrder__c>();
+        list<FoodOrder__c> lstcf=[Select id from FoodOrder__c ];
+        for(FoodOrder__c c:lstcf)
+        {
+           listCofee.add(c);
+        }
+        delete  listCofee;
+    }
+     public static void deleteMenuItems()
+    {
+        list<MenuItems__c> listCofee= new list<MenuItems__c>();
+        list<MenuItems__c> lstcf=[Select id from MenuItems__c ];
+        for(MenuItems__c c:lstcf)
+        {
+           listCofee.add(c);
+        }
+        delete  listCofee;
+    }
+}
